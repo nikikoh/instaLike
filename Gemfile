@@ -32,6 +32,9 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'haml-rails'
 gem 'jquery-rails'
+
+# sidekiq周りのgem
+gem 'sinatra', require: false
 gem 'sidekiq'
 
 group :development, :test do
