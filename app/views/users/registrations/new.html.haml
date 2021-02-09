@@ -1,25 +1,25 @@
 .firstViewPic
   = image_tag 'firstViewPic.jpg', alt: 'ログイン画面にだすいい感じの画像'
 
-%body.formBody
+%body.form_body
   = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
 
     .field
-    = f.label :Account
+    = f.label :Account, class: 'form_text'
     %br/
-    = f.text_field :name, autofocus: true, autocomplete: "account"
+    = f.text_field :name, autofocus: true, autocomplete: "account", class: 'form_box'
 
     .field
-      = f.label :Email
+      = f.label :Email, class: 'form_text'
       %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form_box'
     
     .field
-      = f.label :Password
+      = f.label :Password, class: 'form_text'
       %br/
-      = f.password_field :password, autocomplete: "new-password"
+      = f.password_field :password, autocomplete: "new-password", class: 'form_box'
+
+    = render "users/shared/links"
     
     .actions
-      = f.submit "CREATE ACCOUNT"
-
-= render "users/shared/links"
+      = f.submit "CREATE ACCOUNT", class: 'form_button'
