@@ -1,5 +1,6 @@
 @import 'form';
 @import 'tabs';
+@import 'profile';
 
 a {
     text-decoration: none;
@@ -19,4 +20,8 @@ a {
 
     left: 130%;
 
+}
+
+.site_backer{
+  size: 1000px;
 }

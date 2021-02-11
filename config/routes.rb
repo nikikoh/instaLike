@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'profiles/index'
   mount Sidekiq::Web, at: "/sidekiq" if Rails.env.development?
 
   devise_for :users, controllers: {
@@ -8,6 +9,8 @@ Rails.application.routes.draw do
     sessions: "users/sessions",
   }
 
-  resources :article
-  resources :user
+  resources :profiles, only: [:index, :edit, :update, :show]
+  resources :users
+
+  root to: "profiles#index"
 end
