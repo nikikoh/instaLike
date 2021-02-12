@@ -1,5 +1,5 @@
 .firstViewPic
-  = image_tag 'firstViewPic.jpg', alt: 'ログイン画面にだすいい感じの画像'
+  = image_tag 'header-images.jpg', alt: 'ログイン画面にだすいい感じの画像'
 
 %body.form_body
   = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
