@@ -1,4 +1,6 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @profile = current_user.profile
   end
@@ -24,7 +26,7 @@ class ProfilesController < ApplicationController
     params.require(:profile).permit(
       :name,
       :bio,
-      :avatar
+      :image
     )
   end
 end

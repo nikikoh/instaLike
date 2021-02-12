@@ -1,7 +1,7 @@
 .form{
 
     &_body{
-        margin-top: 480px;
+        margin-top: 150px;
         margin-left: 10px;
     }
 
@@ -27,7 +27,7 @@
 
     &_box{
         height: 28px;
-        width: 42em;
+        width: 100%;
         margin-bottom: 20px;
         transition: all .6s ease;
         
@@ -41,18 +41,15 @@
     }
 
     &_button{
-        position: absolute;
-        top: 50%;
-        left: 50%;
+        position: center;
+        width: 60%;
+        height: 50px;
+        
         transform: translate(50%, 50%);
-        -webkit-transform: translate(40%, 400%);
-        -ms-transform: translate(50%, 50%);
+        -webkit-transform: translate(30%, 0%);
+        -ms-transform: translate(50%, 10%);
 
-        width: 343px;
-        height: 48px;
-        left: 16px;
-        top: 626px;
-
+        margin-top: 5em;
         background: #FFE600;
     }
 }

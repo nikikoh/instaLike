@@ -1,16 +1,15 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
   # アバターの画像
-  belongs_to :profile
-  has_one_attached :avatar
+  has_one :profile
+  
 
   def avatar_image
-    if profile&.avatar&.attached?
-      profile.avatar
+    if profile&.image&.attached?
+      profile.image
     else
       'default-avatar.png'
     end
