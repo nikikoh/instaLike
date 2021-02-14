@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
     def index
-        render 'profile'
+        render 'profiles#index'
     end
 end

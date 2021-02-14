@@ -5,6 +5,8 @@ class ProfilesController < ApplicationController
     @profile = current_user.profile
   end
 
+  def show
+  end
   def edit
     @profile = current_user.prepare_profile
   end
@@ -12,7 +14,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = current_user.prepare_profile
     @profile.assign_attributes(profile_params)
-    if @profile.save
+    if @profile.save  :validate => false
       redirect_to profile_path, notice: 'プロフィールを更新しました'
     else
       flash.now[:error] = '更新できませんでした'
@@ -24,8 +26,8 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:profile).permit(
+      :email,
       :name,
-      :bio,
       :image
     )
   end

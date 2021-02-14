@@ -5,6 +5,12 @@
   = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
 
     .field
+    = f.label :image
+    %br/
+    = f.file_field :image
+
+
+    .field
     = f.label :Account, class: 'form_text'
     %br/
     = f.text_field :name, autofocus: true, autocomplete: "account", class: 'form_box'
