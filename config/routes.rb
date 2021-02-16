@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :profiles, only: [:index, :edit, :update, :show]
   resources :users
 
-  root to: "profiles#index"
+  root to: "profiles#show"
 end
