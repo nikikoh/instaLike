@@ -1,4 +1,4 @@
-$avatar-size: 32px;
+$image-size: 32px;
 
 .profilePage{
     display: flex;
@@ -24,6 +24,14 @@ $avatar-size: 32px;
         transform: translate(50%, 50%);
         -webkit-transform: translate(0%, 8%);
         transform: translate(0%, 9%);
+
+        &_actionButton {
+            margin-top: 1em;
+
+            justify-content: center;
+            font-size: 16px;
+            border-radius: 4px;
+        }
 
         &_image{
             // まるにする

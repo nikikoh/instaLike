@@ -21,11 +21,3 @@ module InstaLike
     config.active_job.queue_adapter = :sidekiq
   end
 end
-
-module AwesomeImages
-  class Application < Rails::Application
-    config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
-    # 以下省略
-
-  end
-end
