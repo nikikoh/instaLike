@@ -1,0 +1,16 @@
+= link_to post_path(post) do
+
+  .post_detail
+    .user_name
+      %p= post.author_name
+
+    .postPage_user_image
+      = image_tag post.user.avatar_image.url
+    .img_zone
+      = post.image
+      .card_content
+        .card_title
+          = post.word
+    -#   .card_heart
+    -#     = image_tag 'heart.svg'
+    -#     %span= article.like_count

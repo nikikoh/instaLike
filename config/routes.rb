@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :posts
   get 'profiles/index'
   mount Sidekiq::Web, at: "/sidekiq" if Rails.env.development?
 

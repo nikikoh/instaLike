@@ -1,0 +1,8 @@
+.container 
+  = link_to new_post_path do
+    .cam_btn
+      %i.fas.fa-camera.fa-3x
+  %hr
+
+  - posts.each do |post|
+    = render 'commons/post', post: post

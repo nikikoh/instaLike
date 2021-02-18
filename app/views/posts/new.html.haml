@@ -1,0 +1,12 @@
+%h1 Status
+
+= link_to 'Cancel', posts_path
+
+.user_name 
+  = current_user.name
+
+.postPage_user_image
+  = current_user.avatar_image.url
+
+= render 'form'
+
