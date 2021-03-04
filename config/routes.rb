@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :profiles, only: [:index, :edit, :update, :show]
   resources :users
+  resources :posts, only: [:index, :new]
 
   root to: "profiles#show"
 end

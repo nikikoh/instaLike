@@ -17,7 +17,9 @@
       = link_to 'Edit', edit_profile_path(current_user.id)
     - else
       = 'Follow'
-    // 投稿数
-    // フォロワーの数
-    // フォロー数
-    // 投稿している画像
+
+= link_to 'ホームへ', posts_path(current_user.id)
+// 投稿数
+// フォロワーの数
+// フォロー数
+// 投稿している画像

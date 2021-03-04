@@ -7,21 +7,12 @@
           %li= message
 
   .field
-    = f.label :word
-    = f.text_area :word
+    = f.text_area :word, class: 'form_box', placeholder: 'Whats on your mind?'
 
   .field
-    = f.label :image
-    = f.file_field :image
-  .field
-    = f.label :image
-    = f.file_field :image
-  .field
-    = f.label :image
-    = f.file_field :image
-  .field
-    = f.label :image
-    = f.file_field :image
+    = f.file_field :images, multiple: true
 
   .actions
+    = link_to 'Cancel', posts_path
+
     = f.submit 'Post'

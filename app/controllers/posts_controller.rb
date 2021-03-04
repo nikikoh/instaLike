@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
+    @post = Post.find_by(params[:id])
     @posts = Post.all
   end
 
@@ -12,6 +13,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    @user = current_user
     @post = current_user.posts.build
   end
 
@@ -61,6 +63,7 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit( :word,
-                                    images_attributes: [:name, :id]).merge(user_id: current_user.id)
+                                    :image,
+                                    images: []).merge(user_id: current_user.id)
     end
 end
